@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DentalPro - Plataforma SaaS de Clínica Odontológica Premium</title>
+  
+  <link rel="stylesheet" href="src/css/base.css">
+  <link rel="stylesheet" href="src/css/landing.css">
+</head>
+<body>
+  <!-- ============================================
+       NAVIGATION
+       ============================================ -->
+  <nav class="navbar navbar-landing">
+    <div class="container flex-between">
+      <div class="logo">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="16" cy="16" r="14" fill="url(#gradient-logo)" stroke="currentColor" stroke-width="2"/>
+          <path d="M10 16c0-3.314 2.686-6 6-6s6 2.686 6 6-2.686 6-6 6-6-2.686-6-6z" fill="white"/>
+          <defs>
+            <linearGradient id="gradient-logo" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#10b981"/>
+              <stop offset="100%" stop-color="#06b6d4"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="logo-text">DentalPro</span>
+      </div>
+
+      <div class="nav-menu">
+        <a href="#features" class="nav-link">Recursos</a>
+        <a href="#services" class="nav-link">Serviços</a>
+        <a href="#testimonials" class="nav-link">Depoimentos</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <button class="btn btn-ghost" onclick="openUserTypeModal('login')">Login</button>
+        <button class="btn btn-primary" onclick="openUserTypeModal('signup')">Começar Grátis</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================
+       HERO SECTION
+       ============================================ -->
+  <section class="hero">
+    <div class="hero-background"></div>
+    <div class="hero-grid"></div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">Transforme sua Clínica Odontológica</h1>
+        <p class="hero-subtitle">Gestão completa de pacientes, agendamentos e finanças com tecnologia premium. Experiência visual de outro nível.</p>
+        
+        <div class="hero-cta">
+          <button class="btn btn-primary btn-lg" onclick="openUserTypeModal('signup')">
+            Comece em 2 Minutos
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+              <path d="M7 10h6M13 7l3 3-3 3"/>
+            </svg>
+          </button>
+          <button class="btn btn-ghost btn-lg" onclick="scrollToDemo()">
+            Ver Demo
+          </button>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">2500+</span>
+            <span class="stat-label">Clínicas Confiando</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">450K+</span>
+            <span class="stat-label">Pacientes Gerenciados</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">4.9★</span>
+            <span class="stat-label">Avaliação Média</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="dashboard-mockup glass">
+          <div class="mockup-header">
+            <div class="mockup-dot"></div>
+            <div class="mockup-dot"></div>
+            <div class="mockup-dot"></div>
+          </div>
+          <div class="mockup-content">
+            <div class="mockup-line" style="width: 60%;"></div>
+            <div class="mockup-line" style="width: 80%;"></div>
+            <div class="mockup-lines">
+              <div class="mockup-line-small"></div>
+              <div class="mockup-line-small"></div>
+              <div class="mockup-line-small"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FEATURES SECTION
+       ============================================ -->
+  <section id="features" class="features">
+    <div class="container">
+      <div class="section-header">
+        <h2>Recursos Premium</h2>
+        <p>Tudo que você precisa em uma única plataforma elegante</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M8 11h16M8 16h16M8 21h10M4 4h24c1.1 0 2 .9 2 2v20c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            </svg>
+          </div>
+          <h3>Agendamento Inteligente</h3>
+          <p>Sistema de calendário visual com sincronização automática e lembretes inteligentes para pacientes.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M16 4v24M8 12h16M8 20h12M4 8h24c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2v-14c0-1.1.9-2 2-2z"/>
+            </svg>
+          </div>
+          <h3>Gestão Financeira</h3>
+          <p>Dashboard financeiro em tempo real com relatórios automáticos e integração com sistemas de pagamento.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="16" cy="12" r="4"/>
+              <path d="M6 24c0-4.4 4.5-8 10-8s10 3.6 10 8"/>
+              <path d="M26 12c1.1 0 2 .9 2 2s-.9 2-2 2"/>
+            </svg>
+          </div>
+          <h3>Gestão de Pacientes</h3>
+          <p>Prontuário eletrônico completo com histórico, documentos e comunicação integrada.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 8h24M4 16h12M4 24h16M24 20l2 2 4-4"/>
+            </svg>
+          </div>
+          <h3>Relatórios Avançados</h3>
+          <p>Analytics em tempo real com gráficos interativos e exportação automática de relatórios.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M16 2l6.18 12.56h13.82l-11.18 8.12 4.27 12.32L16 27.12l-11.09 8.08 4.27-12.32L-3 14.56h13.82z"/>
+            </svg>
+          </div>
+          <h3>Interface Premium</h3>
+          <p>Design cinematográfico com animações fluidas e experiência visual de classe mundial.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M16 2C8.3 2 2 8.3 2 16s6.3 14 14 14 14-6.3 14-14S23.7 2 16 2zm0 24c-5.5 0-10-4.5-10-10s4.5-10 10-10 10 4.5 10 10-4.5 10-10 10z"/>
+              <path d="M16 8v8l6 4"/>
+            </svg>
+          </div>
+          <h3>Suporte 24/7</h3>
+          <p>Equipe de especialistas disponível sempre que você precisar, com resposta em minutos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SERVICES SECTION
+       ============================================ -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-header">
+        <h2>Serviços Odontológicos Integrados</h2>
+        <p>Gerenciamento especializado para cada tipo de procedimento</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-item">
+          <div class="service-badge">Preventiva</div>
+          <h3>Limpeza e Prevenção</h3>
+          <p>Gerenciamento de consultas preventivas com cronograma automático de revisão.</p>
+        </div>
+
+        <div class="service-item">
+          <div class="service-badge">Estética</div>
+          <h3>Odontologia Estética</h3>
+          <p>Antes e depois com galeria de casos e simulação de resultados.</p>
+        </div>
+
+        <div class="service-item">
+          <div class="service-badge">Implantes</div>
+          <h3>Implantodontia</h3>
+          <p>Planejamento de implantes com timeline de acompanhamento e integração radiológica.</p>
+        </div>
+
+        <div class="service-item">
+          <div class="service-badge">Tratamento</div>
+          <h3>Endodontia</h3>
+          <p>Acompanhamento de tratamentos com alertas de seguimento e gestão de sessões.</p>
+        </div>
+
+        <div class="service-item">
+          <div class="service-badge">Ortodontia</div>
+          <h3>Ortodontia Avançada</h3>
+          <p>Gestão de aparelhos com timeline visual e comunicação com pacientes.</p>
+        </div>
+
+        <div class="service-item">
+          <div class="service-badge">Protetica</div>
+          <h3>Prótese Dentária</h3>
+          <p>Gestão de próteses com cronograma de entrega e ajustes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       TESTIMONIALS SECTION
+       ============================================ -->
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <h2>O Que Nossos Clientes Dizem</h2>
+        <p>Histórias reais de transformação digital</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-avatar">DR</div>
+            <div class="testimonial-info">
+              <h4>Dr. Ricardo Alves</h4>
+              <p>Clínica Alves Odontologia</p>
+            </div>
+          </div>
+          <p class="testimonial-text">"DentalPro revolucionou como gerenciamos nossa clínica. O resultado? 40% mais agendamentos, clientes mais satisfeitos e muito menos estresse."</p>
+          <div class="testimonial-stars">★★★★★</div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-avatar">MF</div>
+            <div class="testimonial-info">
+              <h4>Dra. Mariana Fonseca</h4>
+              <p>Sorriso Perfeito Clínica</p>
+            </div>
+          </div>
+          <p class="testimonial-text">"A plataforma é tão intuitiva que toda equipe passou a usar naturalmente. O design é simplesmente espetacular!"</p>
+          <div class="testimonial-stars">★★★★★</div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-avatar">CP</div>
+            <div class="testimonial-info">
+              <h4>Carlos Pereira</h4>
+              <p>CEO - Rede Dental Brasil</p>
+            </div>
+          </div>
+          <p class="testimonial-text">"Implementamos em 3 clínicas e os números falam por si. ROI positivo em menos de 2 meses. Impressionante!"</p>
+          <div class="testimonial-stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FAQ SECTION
+       ============================================ -->
+  <section id="faq" class="faq">
+    <div class="container">
+      <div class="section-header">
+        <h2>Perguntas Frequentes</h2>
+        <p>Respostas para suas dúvidas sobre DentalPro</p>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3 class="faq-question" onclick="toggleFaq(this)">
+            Como faço para migrar meus dados existentes?
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+              <path d="M6 8l4 4 4-4"/>
+            </svg>
+          </h3>
+          <p class="faq-answer hidden">Nossa equipe de suporte realiza a migração completa dos seus dados de forma gratuita. O processo leva em média 48 horas e você pode continuar usando seu sistema anterior durante a migração.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question" onclick="toggleFaq(this)">
+            Qual é o tempo de implementação?
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+              <path d="M6 8l4 4 4-4"/>
+            </svg>
+          </h3>
+          <p class="faq-answer hidden">A maioria das clínicas está operacional em 24 a 48 horas. Oferecemos suporte dedicado durante toda a implementação e treinamento completo para sua equipe.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question" onclick="toggleFaq(this)">
+            DentalPro funciona offline?
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+              <path d="M6 8l4 4 4-4"/>
+            </svg>
+          </h3>
+          <p class="faq-answer hidden">Sim! O sistema tem modo offline que sincroniza automaticamente quando a conexão é restaurada. Perfeito para clínicas com internet instável.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question" onclick="toggleFaq(this)">
+            Como é feita a segurança dos dados?
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+              <path d="M6 8l4 4 4-4"/>
+            </svg>
+          </h3>
+          <p class="faq-answer hidden">Todos os dados são criptografados em trânsito e em repouso. Fazemos backups automáticos diários, com redundância em múltiplas regiões. Conformidade LGPD e HIPAA inclusos.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question" onclick="toggleFaq(this)">
+            Posso integrar com meus equipamentos existentes?
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+              <path d="M6 8l4 4 4-4"/>
+            </svg>
+          </h3>
+          <p class="faq-answer hidden">Sim! Oferecemos integração com as principais marcas de equipamentos odontológicos e sistemas de gestão existentes via API.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question" onclick="toggleFaq(this)">
+            Qual é o tempo de contrato?
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+              <path d="M6 8l4 4 4-4"/>
+            </svg>
+          </h3>
+          <p class="faq-answer hidden">Sem contrato de longo prazo! Você pode cancelar a qualquer momento. A maioria dos clientes continua porque ama o produto, não porque está presa a um contrato.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CTA SECTION
+       ============================================ -->
+  <section class="cta-section">
+    <div class="container text-center">
+      <h2>Pronto Para Transformar Sua Clínica?</h2>
+      <p>Comece hoje mesmo com 30 dias de teste grátis. Sem cartão de crédito necessário.</p>
+      <button class="btn btn-primary btn-lg" onclick="openUserTypeModal('signup')">
+        Começar Gratuitamente Agora
+      </button>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>DentalPro</h4>
+          <p>A plataforma SaaS mais premium para clínicas odontológicas.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon">in</a>
+            <a href="#" class="social-icon">tw</a>
+            <a href="#" class="social-icon">fb</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h5>Produto</h5>
+          <a href="#features">Recursos</a>
+          <a href="#services">Serviços</a>
+          <a href="#pricing">Preços</a>
+        </div>
+
+        <div class="footer-section">
+          <h5>Suporte</h5>
+          <a href="#">Documentação</a>
+          <a href="#">Contato</a>
+          <a href="#">Status</a>
+        </div>
+
+        <div class="footer-section">
+          <h5>Legal</h5>
+          <a href="#">Privacidade</a>
+          <a href="#">Termos</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 DentalPro. Todos os direitos reservados.</p>
+        <div class="footer-badges">
+          <span class="badge">LGPD Compliant</span>
+          <span class="badge">Enterprise Grade</span>
+          <span class="badge">24/7 Support</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       MODALS
+       ============================================ -->
+
+  <!-- User Type Selection Modal -->
+  <div id="userTypeModal" class="modal hidden">
+    <div class="modal-overlay" onclick="closeUserTypeModal()"></div>
+    <div class="modal-content user-type-modal">
+      <button class="modal-close" onclick="closeUserTypeModal()">✕</button>
+      <h2>Você é um(a):</h2>
+      <p class="user-type-subtitle">Escolha seu tipo de conta para continuar</p>
+      
+      <div class="user-type-grid">
+        <div class="user-type-card" onclick="selectUserType('clinic', document.userTypeAction)">
+          <div class="user-type-icon">🏥</div>
+          <h3>Clínica/Consultório</h3>
+          <p>Gerencie sua clínica, pacientes e agendamentos</p>
+          <div class="user-type-check">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+        </div>
+
+        <div class="user-type-card" onclick="selectUserType('patient', document.userTypeAction)">
+          <div class="user-type-icon">👤</div>
+          <h3>Paciente</h3>
+          <p>Agende suas consultas e acesse seu histórico médico</p>
+          <div class="user-type-check">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="loginModal" class="modal hidden">
+    <div class="modal-overlay" onclick="closeLoginModal()"></div>
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeLoginModal()">✕</button>
+      <h2>Fazer Login</h2>
+      <form class="modal-form">
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="seu@email.com" required>
+        </div>
+        <div class="form-group">
+          <label>Senha</label>
+          <input type="password" placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Entrar</button>
+      </form>
+      <p class="modal-footer">Não tem uma conta? <a href="#" onclick="switchToSignup()">Crie uma gratuitamente</a></p>
+    </div>
+  </div>
+
+  <div id="signupModal" class="modal hidden">
+    <div class="modal-overlay" onclick="closeSignupModal()"></div>
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeSignupModal()">✕</button>
+      <h2>Criar Conta</h2>
+      <form class="modal-form">
+        <div class="form-group">
+          <label>Nome da Clínica</label>
+          <input type="text" placeholder="Sua Clínica" required>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="seu@email.com" required>
+        </div>
+        <div class="form-group">
+          <label>Senha</label>
+          <input type="password" placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Criar Conta Gratuitamente</button>
+      </form>
+      <p class="modal-footer">Já tem conta? <a href="#" onclick="switchToLogin()">Faça login aqui</a></p>
+    </div>
+  </div>
+
+  <script src="src/js/landing.js"></script>
+</body>
+</html>
